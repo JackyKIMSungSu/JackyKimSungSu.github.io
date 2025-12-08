@@ -1,0 +1,6 @@
+<response>
+    <header>
+        <resultCode>01</resultCode>
+        <resultMsg>APPLICATION_ERROR</resultMsg>
+    </header>
+</response>

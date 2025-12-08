@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>API POST 실습</title>
+</head>
+<body style="background:#02152A; color:white; font-family:sans-serif;">
+  <h1>POST /v1/predict 실습</h1>
+  <button id="btn">예측 요청 보내기</button>
+  <pre id="result"></pre>
+
+  <script>
+    document.getElementById('btn').addEventListener('click', async () => {
+      const res = await fetch('https://reqres.in/api/users', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          user_id: 10,
+          features: [0.1, 0.5, 0.9]
+        })
+      });
+
+      const data = await res.json();
+      document.getElementById('result').textContent =
+        JSON.stringify(data, null, 2);
+    });
+  </script>
+</body>
+</html>
+
