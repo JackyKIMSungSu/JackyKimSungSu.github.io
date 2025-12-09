@@ -1,0 +1,12 @@
+cat > app.log << 'EOF'
+2025-12-09 09:55:12 INFO Server started
+2025-12-09 09:59:01 INFO Health check OK
+2025-12-09 10:01:23 ERROR DB connection failed
+2025-12-09 10:03:45 INFO Retry DB connection
+2025-12-09 10:05:10 ERROR Timeout while calling API
+2025-12-09 10:10:00 INFO User login success
+2025-12-09 10:15:32 ERROR Failed to load user profile
+2025-12-09 11:00:01 INFO Daily job started
+2025-12-09 11:05:17 ERROR Batch job failed
+2025-12-09 11:10:55 INFO Batch job retry scheduled
+EOF
